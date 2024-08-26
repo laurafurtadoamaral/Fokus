@@ -19,7 +19,7 @@ musicaFundo.loop = true;
 let tempoAPercorrer = 1500; // em segundos
 
 btnFoco.addEventListener("click", () => {
-  tempoAPercorrer = 1500;
+  tempoAPercorrer = 3; //1500;
   const tema = "foco";
   const tituloPrincipal = "Otimize sua produtividade,";
   const tituloDestaque = "mergulhe no que importa.";
@@ -72,9 +72,14 @@ exibeTimer();
 
 const tempoDecorrido = () => {
   if (tempoAPercorrer == 0) {
-    musicaFim.play();
+    //musicaFim.play();
     imgPlayPause.src = "./imagens/play_arrow.png";
     btnStartPauseTexto.textContent = "Começar";
+    const focoAtivo = html.getAttribute("data-contexto") == "foco";
+    if (focoAtivo) {
+      const evento = new CustomEvent("focoFinalizado");
+      document.dispatchEvent(evento);
+    }
     zerarContagem();
     return;
   }
