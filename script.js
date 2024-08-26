@@ -19,7 +19,7 @@ musicaFundo.loop = true;
 let tempoAPercorrer = 1500; // em segundos
 
 btnFoco.addEventListener("click", () => {
-  tempoAPercorrer = 3; //1500;
+  tempoAPercorrer = 1500;
   const tema = "foco";
   const tituloPrincipal = "Otimize sua produtividade,";
   const tituloDestaque = "mergulhe no que importa.";
