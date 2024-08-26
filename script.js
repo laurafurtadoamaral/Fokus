@@ -72,7 +72,7 @@ exibeTimer();
 
 const tempoDecorrido = () => {
   if (tempoAPercorrer == 0) {
-    //musicaFim.play();
+    musicaFim.play();
     imgPlayPause.src = "./imagens/play_arrow.png";
     btnStartPauseTexto.textContent = "Começar";
     const focoAtivo = html.getAttribute("data-contexto") == "foco";
